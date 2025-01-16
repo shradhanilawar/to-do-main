@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "334d6b96-2a68-4ea3-a3b9-53a76b963f77",
+		"name": "greeka-to-do-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31734062"
+	},
+	"item": [
+		{
+			"name": "create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zee5\",\r\n    \"dueDate\": \"2020-01-20\",\r\n    \"status\": \"Pause\",\r\n    \"priority\": \"Medium\",\r\n    \"isActive\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zee5\",\r\n    \"dueDate\": \"2020-01-20\",\r\n    \"status\": \"Pause\",\r\n    \"priority\": \"Medium\",\r\n    \"isActive\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b2-EdrHvTQ9kXG/wUcw7JGgFqbRoKU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 14:51:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Zee5\",\n    \"dueDate\": \"2020-01-20\",\n    \"status\": \"Pause\",\n    \"priority\": \"Medium\",\n    \"isActive\": false,\n    \"id\": 23,\n    \"createdAt\": \"2025-01-16T14:51:24.648Z\",\n    \"updatedAt\": \"2025-01-16T14:51:24.648Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "find by ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/todo/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"19"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "find by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/todo/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"19"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b2-YIOKU+H6+VtD9kLbkaXyAJqt80k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 14:52:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 19,\n    \"name\": \"github\",\n    \"dueDate\": \"2025-01-16\",\n    \"status\": \"Done\",\n    \"priority\": \"Normal\",\n    \"isActive\": true,\n    \"createdAt\": \"2025-01-16T14:47:24.498Z\",\n    \"updatedAt\": \"2025-01-16T14:47:24.498Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Find All",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "911"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38f-68oeRvtKSklHOdozoeJuZPEJvZs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 14:51:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    [\n        {\n            \"id\": 19,\n            \"name\": \"github\",\n            \"dueDate\": \"2025-01-16\",\n            \"status\": \"Done\",\n            \"priority\": \"Normal\",\n            \"isActive\": true,\n            \"createdAt\": \"2025-01-16T14:47:24.498Z\",\n            \"updatedAt\": \"2025-01-16T14:47:24.498Z\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"chatgpt\",\n            \"dueDate\": \"2026-05-01\",\n            \"status\": \"Pending\",\n            \"priority\": \"Normal\",\n            \"isActive\": false,\n            \"createdAt\": \"2025-01-16T14:49:03.026Z\",\n            \"updatedAt\": \"2025-01-16T14:49:03.026Z\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"hotstar\",\n            \"dueDate\": \"2022-04-10\",\n            \"status\": \"In_Progress\",\n            \"priority\": \"High\",\n            \"isActive\": true,\n            \"createdAt\": \"2025-01-16T14:50:01.179Z\",\n            \"updatedAt\": \"2025-01-16T14:50:01.179Z\"\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Netflix\",\n            \"dueDate\": \"2021-03-30\",\n            \"status\": \"Pause\",\n            \"priority\": \"High\",\n            \"isActive\": true,\n            \"createdAt\": \"2025-01-16T14:50:46.761Z\",\n            \"updatedAt\": \"2025-01-16T14:50:46.761Z\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Zee5\",\n            \"dueDate\": \"2020-01-20\",\n            \"status\": \"Pause\",\n            \"priority\": \"Medium\",\n            \"isActive\": false,\n            \"createdAt\": \"2025-01-16T14:51:24.648Z\",\n            \"updatedAt\": \"2025-01-16T14:51:24.648Z\"\n        }\n    ],\n    5\n]"
+				}
+			]
+		},
+		{
+			"name": "update by ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zee5\",\r\n    \"dueDate\": \"2020-01-20\",\r\n    \"status\": \"Pause\",\r\n    \"priority\": \"Medium\",\r\n    \"isActive\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/todo/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"19"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update by ID",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zee5\",\r\n    \"dueDate\": \"2020-01-20\",\r\n    \"status\": \"Pause\",\r\n    \"priority\": \"Medium\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/todo/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"19"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "177"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b1-7gDTYGpg8oa9SpcecH7GfYG4HXg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 14:54:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 19,\n    \"name\": \"Zee5\",\n    \"dueDate\": \"2020-01-20\",\n    \"status\": \"Pause\",\n    \"priority\": \"Medium\",\n    \"isActive\": true,\n    \"createdAt\": \"2025-01-16T14:47:24.498Z\",\n    \"updatedAt\": \"2025-01-16T14:54:49.169Z\"\n}"
+				}
+			]
+		}
+	]
+}
